@@ -3,6 +3,8 @@ import sys
 import random
 import requests
 import os.path
+
+from contextlib import suppress
 from pygame.locals import *
 from pygame import mixer
 from PIL import Image
@@ -465,11 +467,12 @@ class Deck:
                     # Retrive data from PokeAPI for the Pokemon corresponding to the selected id
                     # Check if there is an image available for the Pokemon with the id selected
                     response = requests.get(f'https://pokeapi.co/api/v2/pokemon/{id}').json()
-                    image_path = 'images/pokemon/' + response["name"] + '.png'
-                    if os.path.isfile(image_path):
+                    image_path = 'https://github.com/MaCeleste/PokeWars/raw/main/images/pokemon/' + response["name"] + '.png'
+                    response = requests.get(image_path)
+                    if response.status_code == 200:
                         break
                     else:
-                        continue
+                        continue 
                 else:
                     print('id already exists')
                     continue
