@@ -36,7 +36,7 @@ fps = 60
 
 # Set caption and icon
 pygame.display.set_caption('PokeWars')
-icon = pygame.image.load('images/icon.png')
+icon = pygame.image.load('https://github.com/MaCeleste/PokeWars/raw/main/images/icon.png')
 pygame.display.set_icon(icon)
 
 # Colours 
