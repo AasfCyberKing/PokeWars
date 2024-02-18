@@ -5,6 +5,7 @@ import requests
 import os.path
 from pygame.locals import *
 from pygame import mixer
+from PIL import Image
 
 # Initialise pygame
 pygame.init()
@@ -332,7 +333,9 @@ class PC:
             id_text = small_card_font.render(f'ID: {self.cards[self.selected_card]["id"]}', True, white)
             height_text = small_card_font.render(f'Height: {self.cards[self.selected_card]["height"]}', True, white)
             weight_text = small_card_font.render(f'Weight: {self.cards[self.selected_card]["weight"]}', True, white)
-            image = pygame.image.load(f'images/pokemon/{self.cards[self.selected_card]["image"]}').convert_alpha()
+            x = f'https://github.com/MaCeleste/PokeWars/raw/main/images/pokemon/{self.cards[self.selected_card]["image"]}'
+            y = Image.open(requests.get(url, stream=True).raw)
+            image = pygame.image.load(y).convert_alpha()
             image_resized = pygame.transform.scale(image, (140,140))
 
             screen.blit(name_text, (630, 385))
