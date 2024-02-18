@@ -22,13 +22,13 @@ bg_img = pygame.image.load('https://github.com/MaCeleste/PokeWars/raw/main/image
 bg_img = pygame.transform.scale(bg_img,(WIDTH, HEIGHT))
 
 # Start screen music
-mixer.music.load('sounds/music.ogg')
+mixer.music.load('https://github.com/MaCeleste/PokeWars/raw/main/sounds/music.ogg')
 mixer.music.play(-1)
 
 # Load sound effects
-win_round = pygame.mixer.Sound('sounds/win_round.wav')
-lose_round = pygame.mixer.Sound('sounds/lose_round.wav')
-card_selected = pygame.mixer.Sound('sounds/selected.wav')
+win_round = pygame.mixer.Sound('https://github.com/MaCeleste/PokeWars/raw/main/sounds/win_round.wav')
+lose_round = pygame.mixer.Sound('https://github.com/MaCeleste/PokeWars/raw/main/sounds/lose_round.wav')
+card_selected = pygame.mixer.Sound('https://github.com/MaCeleste/PokeWars/raw/main/sounds/selected.wav')
 
 # Define FPS
 clock = pygame.time.Clock()
