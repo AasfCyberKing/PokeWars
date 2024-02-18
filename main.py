@@ -18,7 +18,7 @@ HEIGHT = 1000
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 
 # Start screen background
-bg_img = pygame.image.load('images/bg.jpg')
+bg_img = pygame.image.load('https://github.com/MaCeleste/PokeWars/raw/main/images/bg.jpg')
 bg_img = pygame.transform.scale(bg_img,(WIDTH, HEIGHT))
 
 # Start screen music
